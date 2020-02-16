@@ -1,19 +1,17 @@
+from discord.ext import commands
+import os
+import traceback
 import discord
 import asyncio
 import random
 import urllib.request
 import json
 
-client = discord.Client()
+bot = commands.Bot(command_prefix='/')
+token = os.environ['DISCORD_BOT_TOKEN']
 
-@client.event
-async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
 
-@client.event
+@bot.event
 async def on_message(message):
     # 「おはよう」で始まるか調べる
     d = 0
@@ -38,4 +36,5 @@ async def on_message(message):
          resp = json.loads(resp.decode('utf-8'))
          await message.channel.send(resp[apple-mobile-web-app-title])
 
-client.run("Njc4MDY1MTU5NDk0ODI4MDUz.Xkj-IQ.o1jA5G1SA7W_pivwDACwh0sO1O4")
+
+bot.run(token)
