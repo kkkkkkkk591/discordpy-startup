@@ -33,4 +33,4 @@ async def on_message(message):
          resp = json.loads(resp.decode('utf-8'))
          await message.channel.send(resp[apple-mobile-web-app-title])
 
-client.run(DISCORD_BOT_TOKEN)
+client.run("token")
