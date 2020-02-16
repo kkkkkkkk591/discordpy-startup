@@ -38,4 +38,4 @@ async def on_message(message):
          resp = json.loads(resp.decode('utf-8'))
          await message.channel.send(resp[apple-mobile-web-app-title])
 
-client.run("Njc4MDY1MTU5NDk0ODI4MDUz.Xkj-IQ.o1jA5G1SA7W_pivwDACwh0sO1O4")
+client.run("Njc4MDY1MTU5NDk0ODI4MDUz.XklvsA.uEKypBJ1a8nTZlPyJJaXRlMuKXc")
